@@ -18,7 +18,7 @@ public class DoctorService {
         return doctorRepository.findAll();
     }
 
-    public Optional<Doctor> getDoctorById(Long id) {
+    public Optional<Doctor> getDoctorById(int id) {
         return doctorRepository.findById(id);
     }
 
@@ -26,7 +26,7 @@ public class DoctorService {
         return doctorRepository.save(doctor);
     }
 
-    public void deleteDoctor(Long id) {
+    public void deleteDoctor(int id) {
         doctorRepository.deleteById(id);
     }
 }

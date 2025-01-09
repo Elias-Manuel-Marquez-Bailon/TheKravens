@@ -20,7 +20,7 @@ public class DoctorController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Doctor> getDoctorById(@PathVariable Long id) {
+    public Optional<Doctor> getDoctorById(@PathVariable int id) {
         return doctorService.getDoctorById(id);
     }
 
@@ -36,7 +36,7 @@ public class DoctorController {
     }
 
     @DeleteMapping("/{id}")
-    public void deleteDoctor(@PathVariable Long id) {
+    public void deleteDoctor(@PathVariable int id) {
         doctorService.deleteDoctor(id);
     }
 }

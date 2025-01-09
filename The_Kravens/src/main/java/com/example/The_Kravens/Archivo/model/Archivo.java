@@ -1,7 +1,6 @@
 package com.example.The_Kravens.Archivo.model;
-
-
-import com.example.The_Kravens.Consultorio.model.Consultorio;
+import com.example.The_Kravens.Doctor.model.Doctor;
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -10,14 +9,16 @@ public class Archivo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @ManyToOne
-    private Consultorio consultorio;
-
     @Column(nullable = false)
     private String fecha;
 
     @Lob
     private String contenido;
+
+    @ManyToOne
+    @JsonBackReference
+    @JoinColumn(name = "doctor_id", nullable = false)
+    private Doctor doctor;
 
     public int getId() {
         return id;
@@ -25,14 +26,6 @@ public class Archivo {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public Consultorio getConsultorio() {
-        return consultorio;
-    }
-
-    public void setConsultorio(Consultorio consultorio) {
-        this.consultorio = consultorio;
     }
 
     public String getFecha() {
@@ -49,5 +42,13 @@ public class Archivo {
 
     public void setContenido(String contenido) {
         this.contenido = contenido;
+    }
+
+    public Doctor getDoctor() {
+        return doctor;
+    }
+
+    public void setDoctor(Doctor doctor) {
+        this.doctor = doctor;
     }
 }

@@ -1,6 +1,6 @@
 package com.example.The_Kravens.Medicamento.model;
 
-import com.example.The_Kravens.Farmacia.model.Farmacia;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -15,8 +15,7 @@ public class Medicamento {
     @Column(nullable = false)
     private int stock;
 
-    @ManyToOne
-    private Farmacia farmacia;
+
 
     public int getId() {
         return id;
@@ -42,11 +41,4 @@ public class Medicamento {
         this.stock = stock;
     }
 
-    public Farmacia getFarmacia() {
-        return farmacia;
-    }
-
-    public void setFarmacia(Farmacia farmacia) {
-        this.farmacia = farmacia;
-    }
-}
+ }

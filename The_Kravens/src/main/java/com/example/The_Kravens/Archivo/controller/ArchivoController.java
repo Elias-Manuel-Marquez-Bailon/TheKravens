@@ -18,13 +18,13 @@ public class ArchivoController {
         return archivoService.getAllArchivos();
     }
 
-    @PostMapping
-    public Archivo createArchivo(@RequestBody Archivo archivo) {
-        return archivoService.saveArchivo(archivo);
+    @PostMapping("/{doctorId}")
+    public Archivo createArchivo(@PathVariable int doctorId, @RequestBody Archivo archivo) {
+        return archivoService.saveArchivo(archivo, doctorId);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteArchivo(@PathVariable Long id) {
+    public void deleteArchivo(@PathVariable int id) {
         archivoService.deleteArchivo(id);
     }
 }

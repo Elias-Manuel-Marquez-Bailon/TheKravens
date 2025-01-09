@@ -1,8 +1,11 @@
 package com.example.The_Kravens.Doctor.model;
 
-import com.example.The_Kravens.Consultorio.model.Consultorio;
+import com.example.The_Kravens.Archivo.model.Archivo;
 import com.example.The_Kravens.Utils.Turno;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 @Entity
 public class Doctor {
@@ -22,8 +25,9 @@ public class Doctor {
     @Enumerated(EnumType.STRING)
     private Turno turno;
 
-    @ManyToOne
-    private Consultorio consultorio;
+    @OneToMany(mappedBy = "doctor", cascade = CascadeType.ALL)
+    @JsonManagedReference
+    private List<Archivo> archivos;
 
     public int getId() {
         return id;
@@ -65,12 +69,11 @@ public class Doctor {
         this.turno = turno;
     }
 
-    public Consultorio getConsultorio() {
-        return consultorio;
+    public List<Archivo> getArchivos() {
+        return archivos;
     }
 
-    public void setConsultorio(Consultorio consultorio) {
-        this.consultorio = consultorio;
+    public void setArchivos(List<Archivo> archivos) {
+        this.archivos = archivos;
     }
 }
-
