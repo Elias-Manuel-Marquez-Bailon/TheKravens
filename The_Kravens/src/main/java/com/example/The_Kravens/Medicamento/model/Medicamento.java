@@ -1,10 +1,12 @@
 package com.example.The_Kravens.Medicamento.model;
-
-
 import jakarta.persistence.*;
 
 @Entity
 public class Medicamento {
+
+
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;

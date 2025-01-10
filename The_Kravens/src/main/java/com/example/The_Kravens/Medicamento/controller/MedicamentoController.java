@@ -2,13 +2,17 @@ package com.example.The_Kravens.Medicamento.controller;
 
 import com.example.The_Kravens.Medicamento.model.Medicamento;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
 
-@RestController
+import org.springframework.web.bind.annotation.CrossOrigin;
+
+@CrossOrigin(origins = "http://127.0.0.1:5500")
 @RequestMapping("/medicamentos")
+@RestController
 public class MedicamentoController {
 
     @Autowired
@@ -38,5 +42,9 @@ public class MedicamentoController {
     @DeleteMapping("/{id}")
     public void deleteMedicamento(@PathVariable Long id) {
         medicamentoService.deleteMedicamento(id);
+    }
+    @RequestMapping(method = RequestMethod.OPTIONS)
+    public ResponseEntity<?> handleOptionsRequest() {
+        return ResponseEntity.ok().build();
     }
 }

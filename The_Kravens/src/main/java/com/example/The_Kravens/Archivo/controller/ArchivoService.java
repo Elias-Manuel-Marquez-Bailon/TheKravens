@@ -1,12 +1,10 @@
 package com.example.The_Kravens.Archivo.controller;
-
 import com.example.The_Kravens.Archivo.model.Archivo;
 import com.example.The_Kravens.Archivo.model.ArchivoRepository;
 import com.example.The_Kravens.Doctor.model.Doctor;
 import com.example.The_Kravens.Doctor.model.DoctorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 

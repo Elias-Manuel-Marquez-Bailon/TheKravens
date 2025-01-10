@@ -25,6 +25,7 @@ public class Doctor {
     @Enumerated(EnumType.STRING)
     private Turno turno;
 
+
     @OneToMany(mappedBy = "doctor", cascade = CascadeType.ALL)
     @JsonManagedReference
     private List<Archivo> archivos;
