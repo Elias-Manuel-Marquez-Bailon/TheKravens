@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DatabaseToolSources">
-    <data-source name="localhost" uuid="535862cf-32bf-4358-a38d-591dda8fc9a4" type="MYSQL">
+    <data-source name="localhost1" uuid="745a8152-a3cd-4feb-9de0-79e36257028b" type="MYSQL">
       <base-info connect-type="DB_DEFAULT" product="MySQL" version="8.0.40" major-version="8" minor-version="0" jdbc-name="MySQL Connector/J" jdbc-version="mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)" jdbc-major-version="8" jdbc-minor-version="2" />
       <user-name>root</user-name>
       <schema-mapping>
@@ -77,7 +77,7 @@
         <sslMode>REQUIRE</sslMode>
       </ssl-config>
     </data-source>
-    <data-source name="localhost1" uuid="745a8152-a3cd-4feb-9de0-79e36257028b" type="MYSQL">
+    <data-source name="localhost" uuid="535862cf-32bf-4358-a38d-591dda8fc9a4" type="MYSQL">
       <base-info connect-type="DB_DEFAULT" product="MySQL" version="8.0.40" major-version="8" minor-version="0" jdbc-name="MySQL Connector/J" jdbc-version="mysql-connector-j-8.2.0 (Revision: 06a1f724497fd81c6a659131fda822c9e5085b6c)" jdbc-major-version="8" jdbc-minor-version="2" />
       <user-name>root</user-name>
       <schema-mapping>
