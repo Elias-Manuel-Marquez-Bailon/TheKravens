@@ -8,7 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/archivos")
-public class ArchivoController {
+public class ArchivoController   {
 
     @Autowired
     private ArchivoService archivoService;

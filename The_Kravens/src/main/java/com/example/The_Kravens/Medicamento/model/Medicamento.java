@@ -4,9 +4,6 @@ import jakarta.persistence.*;
 @Entity
 public class Medicamento {
 
-
-
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
@@ -16,8 +13,6 @@ public class Medicamento {
 
     @Column(nullable = false)
     private int stock;
-
-
 
     public int getId() {
         return id;
